@@ -19,8 +19,10 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@balkangraph/orgchart.js": "^8.8.6",
     "next": "^12.3.0",
     "next-seo": "^5.5.0",
+    "next-transpile-modules": "^10.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

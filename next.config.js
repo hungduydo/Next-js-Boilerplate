@@ -15,3 +15,7 @@ module.exports = withBundleAnalyzer({
   // You can remove `basePath` if you don't need it.
   reactStrictMode: true,
 });
+
+const withTM = require('next-transpile-modules')(['@balkangraph/orgchart.js']); // pass the modules you would like to see transpiled
+
+module.exports = withTM();
