@@ -19,6 +19,7 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@balkangraph/familytree.js": "^1.7.9",
     "@balkangraph/orgchart.js": "^8.8.6",
     "next": "^12.3.0",
     "next-seo": "^5.5.0",

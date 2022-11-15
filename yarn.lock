@@ -312,6 +312,11 @@
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
 
+"@balkangraph/familytree.js@^1.7.9":
+  version "1.7.9"
+  resolved "https://registry.yarnpkg.com/@balkangraph/familytree.js/-/familytree.js-1.7.9.tgz#3b58e0831499a2992dce266d6fc952495191a63a"
+  integrity sha512-oRxd6qwfnYSU50YqZCgX7kgCqNuV6sxwEw5QHrCwleOgCLRnFFhBMHeG0u1O/0KsLlpVJI0JTDn51Lh2udmeHg==
+
 "@balkangraph/orgchart.js@^8.8.6":
   version "8.8.6"
   resolved "https://registry.yarnpkg.com/@balkangraph/orgchart.js/-/orgchart.js-8.8.6.tgz#c0a58d9a30229af666362cf97effb0c2b690ddf6"

@@ -1,4 +1,4 @@
-import OrgChart from '@balkangraph/orgchart.js';
+import FamilyTree from '@balkangraph/familytree.js';
 
 import { Meta } from '@/layouts/Meta';
 import { Main } from '@/templates/Main';
@@ -7,7 +7,7 @@ function Orgchart(props: { nodeBinding: any; nodes: any }) {
   if (typeof window === 'object') {
     if (document.getElementById('tree')) {
       // eslint-disable-next-line no-new
-      new OrgChart(document.getElementById('tree')!, {
+      new FamilyTree(document.getElementById('tree')!, {
         nodeBinding: props.nodeBinding,
         nodes: props.nodes,
       });
@@ -19,57 +19,166 @@ function Orgchart(props: { nodeBinding: any; nodes: any }) {
 const data = [
   {
     id: 1,
-    name: 'Denny Curtis',
-    title: 'CEO',
-    img: 'https://cdn.balkan.app/shared/2.jpg',
+    pids: [2],
+    name: 'King George VI',
+    img: 'https://cdn.balkan.app/shared/f1.png',
+    gender: 'male',
   },
   {
     id: 2,
-    pid: 1,
-    name: 'Ashley Barnett',
-    title: 'Sales Manager',
-    img: 'https://cdn.balkan.app/shared/3.jpg',
+    pids: [1],
+    name: 'Queen Elizabeth',
+    title: 'The Queen Mother',
+    img: 'https://cdn.balkan.app/shared/f2.png',
+    gender: 'female',
   },
+
   {
     id: 3,
-    pid: 1,
-    name: 'Caden Ellison',
-    title: 'Dev Manager',
-    img: 'https://cdn.balkan.app/shared/4.jpg',
+    pids: [4],
+    mid: 2,
+    fid: 1,
+    name: 'Queen Elizabeth II',
+    img: 'https://cdn.balkan.app/shared/f5.png',
+    gender: 'female',
   },
   {
     id: 4,
-    pid: 2,
-    name: 'Elliot Patel',
-    title: 'Sales',
-    img: 'https://cdn.balkan.app/shared/5.jpg',
+    pids: [3],
+    name: 'Prince Philip',
+    title: 'Duke of Edinburgh',
+    img: 'https://cdn.balkan.app/shared/f3.png',
+    gender: 'male',
   },
+
   {
     id: 5,
-    pid: 2,
-    name: 'Lynn Hussain',
-    title: 'Sales',
-    img: 'https://cdn.balkan.app/shared/6.jpg',
+    mid: 2,
+    fid: 1,
+    name: 'Princess Margaret',
+    img: 'https://cdn.balkan.app/shared/f6.png',
+    gender: 'male',
   },
+
   {
     id: 6,
-    pid: 3,
-    name: 'Tanner May',
-    title: 'Developer',
-    img: 'https://cdn.balkan.app/shared/7.jpg',
+    mid: 3,
+    fid: 4,
+    pids: [7, 8],
+    name: 'Charles',
+    title: 'Prince of Wales',
+    img: 'https://cdn.balkan.app/shared/f8.png',
+    gender: 'male',
   },
   {
     id: 7,
-    pid: 3,
-    name: 'Fran Parsons',
-    title: 'Developer',
-    img: 'https://cdn.balkan.app/shared/8.jpg',
+    pids: [6],
+    name: 'Diana',
+    title: 'Princess of Wales',
+    img: 'https://cdn.balkan.app/shared/f9.png',
+    gender: 'female',
+  },
+  {
+    id: 8,
+    pids: [6],
+    name: 'Camila',
+    title: 'Duchess of Cornwall',
+    img: 'https://cdn.balkan.app/shared/f7.png',
+    gender: 'female',
+  },
+
+  {
+    id: 9,
+    mid: 3,
+    fid: 4,
+    name: 'Anne',
+    title: 'Princess Royal',
+    img: 'https://cdn.balkan.app/shared/f10.png',
+    gender: 'female',
+  },
+  {
+    id: 10,
+    mid: 3,
+    fid: 4,
+    name: 'Prince Andrew',
+    title: 'Duke of York',
+    img: 'https://cdn.balkan.app/shared/f11.png',
+    gender: 'male',
+  },
+  {
+    id: 11,
+    mid: 3,
+    fid: 4,
+    name: 'Prince Edward',
+    title: 'Earl of Wessex',
+    img: 'https://cdn.balkan.app/shared/f12.png',
+    gender: 'male',
+  },
+
+  {
+    id: 12,
+    fid: 6,
+    mid: 7,
+    pids: [14],
+    name: 'Prince William',
+    title: 'Duch of Cambridge',
+    img: 'https://cdn.balkan.app/shared/f14.png',
+    gender: 'male',
+  },
+  {
+    id: 13,
+    fid: 6,
+    mid: 7,
+    pids: [15],
+    name: 'Prince Harry',
+    img: 'https://cdn.balkan.app/shared/f15.png',
+    gender: 'male',
+  },
+  {
+    id: 14,
+    pids: [12],
+    name: 'Catherine',
+    title: 'Duchess of Cambridge',
+    img: 'https://cdn.balkan.app/shared/f13.png',
+    gender: 'female',
+  },
+  {
+    id: 15,
+    pids: [13],
+    name: 'Meghan Markle',
+    img: 'https://cdn.balkan.app/shared/f16.png',
+    gender: 'female',
+  },
+  {
+    id: 16,
+    fid: 12,
+    mid: 14,
+    name: 'Prince George',
+    img: 'https://cdn.balkan.app/shared/f17.png',
+    gender: 'male',
+  },
+  {
+    id: 17,
+    fid: 12,
+    mid: 14,
+    name: 'Prince Charlotte',
+    img: 'https://cdn.balkan.app/shared/f18.png',
+    gender: 'female',
+  },
+  {
+    id: 18,
+    fid: 12,
+    mid: 14,
+    name: 'Prince Louis',
+    img: 'https://cdn.balkan.app/shared/f19.png',
+    gender: 'male',
   },
 ];
 
 const nodeBinding = {
   field_0: 'name',
   img_0: 'img',
+  mouseScrool: false,
 };
 
 const Chart = () => (
