@@ -37,16 +37,21 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
           gtag('set', { 'user_id': 'USER_ID' }); 
             `}
     </Script>
-    
-    <Script src="https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js" type="text/javascript"></Script>
-    <Script>{`
-    var config = {
-      apiKey: '592b99ebdf88c091dad9b556b6d8de236ac97687',
-      product: 'PRO_MULTISITE',
-    };
 
-    CookieControl.load( config );
-   `} </Script>
+    <Script
+      src="https://cc.cdn.civiccomputing.com/9/cookieControl-9.x.min.js"
+      type="text/javascript"
+    ></Script>
+    <Script strategy="lazyOnload" id="civic-load">
+      {`
+        var config = {
+          apiKey: '592b99ebdf88c091dad9b556b6d8de236ac97687',
+          product: 'PRO_MULTISITE',
+        };
+
+        CookieControl.load( config );
+      `}
+    </Script>
 
     <noscript>
       <iframe
