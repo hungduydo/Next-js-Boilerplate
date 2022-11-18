@@ -45,7 +45,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => (
     <Script strategy="lazyOnload" id="civic-load">
       {`
         var config = {
-          apiKey: '592b99ebdf88c091dad9b556b6d8de236ac97687',
+          apiKey: 'f8917928b3d27e5db450c754fea3b344b8238467',
           product: 'PRO_MULTISITE',
         };
 
